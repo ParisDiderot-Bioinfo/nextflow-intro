@@ -21,7 +21,7 @@ The mapping command to use is the following:
 
 
 ```bash
-insert mapping command here
+bowtie2 -q -1 reads_1.fastq -2 reads_2.fastq -x index_prefix -S output.sam -p nb_cpus --very-sensitive-local
 ```
 
 # Samtools view
@@ -31,7 +31,7 @@ The goal is to convert the `sam` file into a compressed binary `bam` file using 
 The samtools command to use is the following:
 
 ```bash
-samtools view -S -b input.sam > output.bam
+samtools view -S -@ nb_cpus -b -o output.bam input.sam
 ```
 
 # Samtools sort
@@ -40,7 +40,7 @@ The goal is to sort the reads mapped on the reference genome by position
 The samtools command to use us the following:
 
 ```bash
-samtools sort input.bam > output.sorted.bam
+samtools sort -@ nb_cpus -o sorted_output.bam input.bam
 ```
 
 # Bedtools
@@ -49,5 +49,5 @@ The goal is to compute the coverage of the reference genome provided with the al
 The bedtools command to use is the following:
 
 ```bedtools
-insert bedtools command here
+genomeCoverageBed -ibam sorted_input.bam > output.gcbout
 ```
