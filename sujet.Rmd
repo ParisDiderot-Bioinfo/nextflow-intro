@@ -1,0 +1,53 @@
+---
+title: "NextFlow Introduction"
+author: "Maxime Borry, Quentin Letourneur"
+date: "06/09/2018"
+output: pdf_document
+---
+
+# Introduction
+
+The goal of this exercise is to recreate the pipeline showned in Figure 1 represented by its DAG
+
+![Directed Acyclic Graph (DAG) of the desired pipeline. Ellipses represent processes, arrows represents channels](/Users/Maxime/Documents/Github-ParisDiderot-Bioinfo/nextflow-intro/img/desired_pipeline.png)
+
+# Channel factory
+
+You may want to use the have a look at the `fromFilePairs` methods to create the channel when working with paired end data
+
+# Mapping 
+
+The mapping command to use is the following:
+
+
+```bash
+insert mapping command here
+```
+
+# Samtools view
+
+The goal is to convert the `sam` file into a compressed binary `bam` file using `samtools view`
+
+The samtools command to use is the following:
+
+```bash
+samtools view -S -b input.sam > output.bam
+```
+
+# Samtools sort
+The goal is to sort the reads mapped on the reference genome by position
+
+The samtools command to use us the following:
+
+```bash
+samtools sort input.bam > output.sorted.bam
+```
+
+# Bedtools
+The goal is to compute the coverage of the reference genome provided with the aligned reads
+
+The bedtools command to use is the following:
+
+```bedtools
+insert bedtools command here
+```
