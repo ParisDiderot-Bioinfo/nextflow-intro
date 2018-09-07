@@ -1,4 +1,6 @@
 # Nextflow-Introduction to M2BIB
+Maxime Borry, Quentin Letourneur  
+Sept. 2018
 
 - The TP instructions are in the file [sujet.pdf](sujet.pdf)
 - The presentation is in the file [nextflow_intro.pdf](nextflow_intro.pdf)
