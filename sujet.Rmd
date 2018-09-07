@@ -9,7 +9,7 @@ output: pdf_document
 
 The goal of this exercise is to recreate the pipeline showned in Figure 1 represented by its DAG
 
-![Directed Acyclic Graph (DAG) of the desired pipeline. Ellipses represent processes, arrows represents channels](/Users/Maxime/Documents/Github-ParisDiderot-Bioinfo/nextflow-intro/img/desired_pipeline.png)
+![Directed Acyclic Graph (DAG) of the desired pipeline. Ellipses represent processes, arrows represents channels](/Users/Maxime/Documents/Github-ParisDiderot-Bioinfo/nextflow-intro/img/desired_workflow.png)
 
 # Channel factory
 
@@ -44,7 +44,7 @@ samtools sort -@ nb_cpus -o sorted_output.bam input.bam
 ```
 
 # Bedtools
-The goal is to compute the coverage of the reference genome provided with the aligned reads
+The goal is to compute the a position specific coverage of the reference genome provided with the aligned reads
 
 The bedtools command to use is the following:
 
